@@ -1,0 +1,673 @@
+--Tactic Gui
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local MotherFrame = Instance.new("Frame")
+local Sidebar = Instance.new("ScrollingFrame")
+local Player = Instance.new("ImageLabel")
+local Tactical = Instance.new("ImageLabel")
+local Upline = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local Main = Instance.new("Frame")
+local Tactical_2 = Instance.new("Frame")
+local Helper = Instance.new("ImageLabel")
+local Credits = Instance.new("TextButton")
+local ANCESTOR = Instance.new("ImageLabel")
+local Credits_2 = Instance.new("TextButton")
+local MainScripter = Instance.new("ImageLabel")
+local Credits_3 = Instance.new("TextButton")
+local Tacticgui = Instance.new("ImageLabel")
+local Credits_4 = Instance.new("TextButton")
+local Tactical_3 = Instance.new("TextButton")
+local Player_2 = Instance.new("Frame")
+local idk = Instance.new("ImageLabel")
+local Idk = Instance.new("ImageLabel")
+local idk_2 = Instance.new("ImageLabel")
+local idk_3 = Instance.new("ImageLabel")
+local idk_4 = Instance.new("ImageLabel")
+local Jump = Instance.new("TextButton")
+local JumpReset = Instance.new("TextButton")
+local WalkspeedLabel = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local WaterCollide = Instance.new("TextButton")
+local Idk_2 = Instance.new("ImageLabel")
+local NoClip = Instance.new("TextButton")
+local Player_3 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+MotherFrame.Name = "MotherFrame"
+MotherFrame.Parent = ScreenGui
+MotherFrame.BackgroundColor3 = Color3.fromRGB(46, 46, 54)
+MotherFrame.Position = UDim2.new(0.532299757, -400, 0.49431169, -225)
+MotherFrame.Size = UDim2.new(0, 700, 0, 460)
+
+Sidebar.Name = "Sidebar"
+Sidebar.Parent = MotherFrame
+Sidebar.Active = true
+Sidebar.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+Sidebar.Position = UDim2.new(0, 0, 0.00899999309, 0)
+Sidebar.Size = UDim2.new(0.214041099, 0, 0.991376221, 0)
+Sidebar.CanvasSize = UDim2.new(0, 0, 0, 15)
+Sidebar.ScrollBarThickness = 0
+
+Player.Name = "Player"
+Player.Parent = Sidebar
+Player.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Player.BackgroundTransparency = 1.000
+Player.Position = UDim2.new(0.0203257147, 0, 0.112869881, 0)
+Player.Size = UDim2.new(0.949999988, 0, 0, 30)
+Player.Image = "rbxassetid://3570695787"
+Player.ImageColor3 = Color3.fromRGB(46, 46, 54)
+Player.ScaleType = Enum.ScaleType.Slice
+Player.SliceCenter = Rect.new(100, 100, 100, 100)
+Player.SliceScale = 0.080
+
+Tactical.Name = "Tactical"
+Tactical.Parent = Sidebar
+Tactical.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tactical.BackgroundTransparency = 1.000
+Tactical.Position = UDim2.new(0.0203257147, 0, 0.0295425877, 0)
+Tactical.Size = UDim2.new(0.949999988, 0, 0, 30)
+Tactical.Image = "rbxassetid://3570695787"
+Tactical.ImageColor3 = Color3.fromRGB(46, 46, 54)
+Tactical.ScaleType = Enum.ScaleType.Slice
+Tactical.SliceCenter = Rect.new(100, 100, 100, 100)
+Tactical.SliceScale = 0.080
+
+Upline.Name = "Upline"
+Upline.Parent = MotherFrame
+Upline.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Upline.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Upline.BorderSizePixel = 0
+Upline.Size = UDim2.new(1, 0, 0.00899999961, 0)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 183, 183)), ColorSequenceKeypoint.new(0.04, Color3.fromRGB(2, 181, 182)), ColorSequenceKeypoint.new(0.58, Color3.fromRGB(75, 134, 178)), ColorSequenceKeypoint.new(0.73, Color3.fromRGB(107, 114, 176)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(125, 92, 164))}
+UIGradient.Parent = Upline
+
+Main.Name = "Main"
+Main.Parent = MotherFrame
+Main.BackgroundColor3 = Color3.fromRGB(46, 46, 54)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.21261248, 1, 0.00899996515, 0)
+Main.Size = UDim2.new(0.785959065, 0, 0.990999997, 0)
+
+Tactical_2.Name = "Tactical"
+Tactical_2.Parent = MotherFrame
+Tactical_2.BackgroundColor3 = Color3.fromRGB(46, 46, 54)
+Tactical_2.BorderSizePixel = 0
+Tactical_2.Position = UDim2.new(0.213, 1, 0.00899999961, 0)
+Tactical_2.Size = UDim2.new(0.786000013, 0, 0.990999997, 0)
+Tactical_2.Visible = false
+
+Helper.Name = "Helper"
+Helper.Parent = Tactical_2
+Helper.Active = true
+Helper.AnchorPoint = Vector2.new(0.5, 0.5)
+Helper.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Helper.BackgroundTransparency = 1.000
+Helper.Position = UDim2.new(0.5, 0, 0.200000003, 0)
+Helper.Selectable = true
+Helper.Size = UDim2.new(0.949999988, 0, 0, 30)
+Helper.Image = "rbxassetid://3570695787"
+Helper.ImageColor3 = Color3.fromRGB(39, 38, 46)
+Helper.ScaleType = Enum.ScaleType.Slice
+Helper.SliceCenter = Rect.new(100, 100, 100, 100)
+Helper.SliceScale = 0.080
+
+Credits.Name = "Credits"
+Credits.Parent = Helper
+Credits.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+Credits.BackgroundTransparency = 1.000
+Credits.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0.0273894537, 0, -0.00752913952, 0)
+Credits.Size = UDim2.new(0.949999988, 0, 0, 30)
+Credits.Font = Enum.Font.GothamBold
+Credits.Text = "Helpers - Bit, Ancestor, and Tiger"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextScaled = true
+Credits.TextSize = 18.000
+Credits.TextWrapped = true
+
+ANCESTOR.Name = "ANCESTOR"
+ANCESTOR.Parent = Tactical_2
+ANCESTOR.Active = true
+ANCESTOR.AnchorPoint = Vector2.new(0.5, 0.5)
+ANCESTOR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ANCESTOR.BackgroundTransparency = 1.000
+ANCESTOR.Position = UDim2.new(0.5, 0, 0.280000001, 0)
+ANCESTOR.Selectable = true
+ANCESTOR.Size = UDim2.new(0.949999988, 0, 0, 30)
+ANCESTOR.Image = "rbxassetid://3570695787"
+ANCESTOR.ImageColor3 = Color3.fromRGB(39, 38, 46)
+ANCESTOR.ScaleType = Enum.ScaleType.Slice
+ANCESTOR.SliceCenter = Rect.new(100, 100, 100, 100)
+ANCESTOR.SliceScale = 0.080
+
+Credits_2.Name = "Credits"
+Credits_2.Parent = ANCESTOR
+Credits_2.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+Credits_2.BackgroundTransparency = 1.000
+Credits_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Credits_2.BorderSizePixel = 0
+Credits_2.Position = UDim2.new(0.0273894537, 0, -0.00752913952, 0)
+Credits_2.Size = UDim2.new(0.949999988, 0, 0, 30)
+Credits_2.Font = Enum.Font.GothamBold
+Credits_2.Text = "INSANE Thanks To Ancestor For Showing Me This Gui"
+Credits_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits_2.TextScaled = true
+Credits_2.TextSize = 18.000
+Credits_2.TextWrapped = true
+
+MainScripter.Name = "Main Scripter"
+MainScripter.Parent = Tactical_2
+MainScripter.Active = true
+MainScripter.AnchorPoint = Vector2.new(0.5, 0.5)
+MainScripter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainScripter.BackgroundTransparency = 1.000
+MainScripter.Position = UDim2.new(0.5, 0, 0.123999998, 0)
+MainScripter.Selectable = true
+MainScripter.Size = UDim2.new(0.949999988, 0, 0, 30)
+MainScripter.Image = "rbxassetid://3570695787"
+MainScripter.ImageColor3 = Color3.fromRGB(39, 38, 46)
+MainScripter.ScaleType = Enum.ScaleType.Slice
+MainScripter.SliceCenter = Rect.new(100, 100, 100, 100)
+MainScripter.SliceScale = 0.080
+
+Credits_3.Name = "Credits"
+Credits_3.Parent = MainScripter
+Credits_3.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+Credits_3.BackgroundTransparency = 1.000
+Credits_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Credits_3.BorderSizePixel = 0
+Credits_3.Position = UDim2.new(0.0273894537, 0, -0.00752913952, 0)
+Credits_3.Size = UDim2.new(0.949999988, 0, 0, 30)
+Credits_3.Font = Enum.Font.GothamBold
+Credits_3.Text = "Main Scripter - Tactic"
+Credits_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits_3.TextScaled = true
+Credits_3.TextSize = 18.000
+Credits_3.TextWrapped = true
+
+Tacticgui.Name = "Tacticgui"
+Tacticgui.Parent = Tactical_2
+Tacticgui.Active = true
+Tacticgui.AnchorPoint = Vector2.new(0.5, 0.5)
+Tacticgui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tacticgui.BackgroundTransparency = 1.000
+Tacticgui.Position = UDim2.new(0.5, 0, 0.0460000001, 0)
+Tacticgui.Selectable = true
+Tacticgui.Size = UDim2.new(0.949999988, 0, 0, 30)
+Tacticgui.Image = "rbxassetid://3570695787"
+Tacticgui.ImageColor3 = Color3.fromRGB(39, 38, 46)
+Tacticgui.ScaleType = Enum.ScaleType.Slice
+Tacticgui.SliceCenter = Rect.new(100, 100, 100, 100)
+Tacticgui.SliceScale = 0.080
+
+Credits_4.Name = "Credits"
+Credits_4.Parent = Tacticgui
+Credits_4.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+Credits_4.BackgroundTransparency = 1.000
+Credits_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Credits_4.BorderSizePixel = 0
+Credits_4.Position = UDim2.new(0.0273894537, 0, -0.00752913952, 0)
+Credits_4.Size = UDim2.new(0.949999988, 0, 0, 30)
+Credits_4.Font = Enum.Font.GothamBold
+Credits_4.Text = "Tactical Gui Credits"
+Credits_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits_4.TextScaled = true
+Credits_4.TextSize = 18.000
+Credits_4.TextWrapped = true
+
+Tactical_3.Name = "Tactical"
+Tactical_3.Parent = MotherFrame
+Tactical_3.BackgroundColor3 = Color3.fromRGB(46, 46, 54)
+Tactical_3.BackgroundTransparency = 1.000
+Tactical_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Tactical_3.BorderSizePixel = 0
+Tactical_3.Position = UDim2.new(0.00857142825, 0, 0.036521744, 0)
+Tactical_3.Size = UDim2.new(0.199118122, 0, 0, 30)
+Tactical_3.Font = Enum.Font.GothamBold
+Tactical_3.Text = "Tactical"
+Tactical_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tactical_3.TextSize = 18.000
+Tactical_3.TextWrapped = true
+Tactical_3.TextXAlignment = Enum.TextXAlignment.Left
+
+Player_2.Name = "Player"
+Player_2.Parent = MotherFrame
+Player_2.BackgroundColor3 = Color3.fromRGB(46, 46, 54)
+Player_2.BorderSizePixel = 0
+Player_2.Position = UDim2.new(0.213, 1, 0.00899999961, 0)
+Player_2.Size = UDim2.new(0.786000013, 0, 0.990999997, 0)
+
+idk.Name = "idk"
+idk.Parent = Player_2
+idk.Active = true
+idk.AnchorPoint = Vector2.new(0.5, 0.5)
+idk.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+idk.BackgroundTransparency = 1.000
+idk.Position = UDim2.new(0.5, 0, 0.0460000001, 0)
+idk.Selectable = true
+idk.Size = UDim2.new(0.949999988, 0, 0, 30)
+idk.Image = "rbxassetid://3570695787"
+idk.ImageColor3 = Color3.fromRGB(39, 38, 46)
+idk.ScaleType = Enum.ScaleType.Slice
+idk.SliceCenter = Rect.new(100, 100, 100, 100)
+idk.SliceScale = 0.080
+
+Idk.Name = "Idk"
+Idk.Parent = Player_2
+Idk.Active = true
+Idk.AnchorPoint = Vector2.new(0.5, 0.5)
+Idk.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Idk.BackgroundTransparency = 1.000
+Idk.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Idk.Position = UDim2.new(0.5, 0, 0.280000001, 0)
+Idk.Selectable = true
+Idk.Size = UDim2.new(0.949999988, 0, 0, 30)
+Idk.Image = "rbxassetid://3570695787"
+Idk.ImageColor3 = Color3.fromRGB(39, 38, 46)
+Idk.ScaleType = Enum.ScaleType.Slice
+Idk.SliceCenter = Rect.new(100, 100, 100, 100)
+Idk.SliceScale = 0.080
+
+idk_2.Name = "idk"
+idk_2.Parent = Player_2
+idk_2.Active = true
+idk_2.AnchorPoint = Vector2.new(0.5, 0.5)
+idk_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+idk_2.BackgroundTransparency = 1.000
+idk_2.Position = UDim2.new(0.5, 0, 0.200000003, 0)
+idk_2.Selectable = true
+idk_2.Size = UDim2.new(0.949999988, 0, 0, 30)
+idk_2.Image = "rbxassetid://3570695787"
+idk_2.ImageColor3 = Color3.fromRGB(39, 38, 46)
+idk_2.ScaleType = Enum.ScaleType.Slice
+idk_2.SliceCenter = Rect.new(100, 100, 100, 100)
+idk_2.SliceScale = 0.080
+
+idk_3.Name = "idk"
+idk_3.Parent = Player_2
+idk_3.Active = true
+idk_3.AnchorPoint = Vector2.new(0.5, 0.5)
+idk_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+idk_3.BackgroundTransparency = 1.000
+idk_3.Position = UDim2.new(0.74000001, 0, 0.123999998, 0)
+idk_3.Selectable = true
+idk_3.Size = UDim2.new(0.469999999, 0, 0, 30)
+idk_3.Image = "rbxassetid://3570695787"
+idk_3.ImageColor3 = Color3.fromRGB(39, 38, 46)
+idk_3.ScaleType = Enum.ScaleType.Slice
+idk_3.SliceCenter = Rect.new(100, 100, 100, 100)
+idk_3.SliceScale = 0.080
+
+idk_4.Name = "idk"
+idk_4.Parent = Player_2
+idk_4.Active = true
+idk_4.AnchorPoint = Vector2.new(0.5, 0.5)
+idk_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+idk_4.BackgroundTransparency = 1.000
+idk_4.Position = UDim2.new(0.25999999, 0, 0.123999998, 0)
+idk_4.Selectable = true
+idk_4.Size = UDim2.new(0.469999999, 0, 0, 30)
+idk_4.Image = "rbxassetid://3570695787"
+idk_4.ImageColor3 = Color3.fromRGB(39, 38, 46)
+idk_4.ScaleType = Enum.ScaleType.Slice
+idk_4.SliceCenter = Rect.new(100, 100, 100, 100)
+idk_4.SliceScale = 0.080
+
+Jump.Name = "Jump"
+Jump.Parent = Player_2
+Jump.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+Jump.BackgroundTransparency = 1.000
+Jump.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Jump.BorderSizePixel = 0
+Jump.Position = UDim2.new(0.0255719777, 0, 0.0933789983, 0)
+Jump.Size = UDim2.new(0.469428062, 0, 0, 30)
+Jump.Font = Enum.Font.GothamBold
+Jump.Text = "Jump Power"
+Jump.TextColor3 = Color3.fromRGB(255, 255, 255)
+Jump.TextScaled = true
+Jump.TextSize = 18.000
+Jump.TextWrapped = true
+
+JumpReset.Name = "Jump Reset"
+JumpReset.Parent = Player_2
+JumpReset.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+JumpReset.BackgroundTransparency = 1.000
+JumpReset.BorderColor3 = Color3.fromRGB(255, 0, 0)
+JumpReset.BorderSizePixel = 0
+JumpReset.Position = UDim2.new(0.503579974, 0, 0.0911854133, 0)
+JumpReset.Size = UDim2.new(0.47141996, 0, 0, 30)
+JumpReset.Font = Enum.Font.GothamBold
+JumpReset.Text = "Jump Power Reset"
+JumpReset.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpReset.TextScaled = true
+JumpReset.TextSize = 18.000
+JumpReset.TextWrapped = true
+
+WalkspeedLabel.Name = "WalkspeedLabel"
+WalkspeedLabel.Parent = Player_2
+WalkspeedLabel.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+WalkspeedLabel.BackgroundTransparency = 1.000
+WalkspeedLabel.BorderColor3 = Color3.fromRGB(255, 0, 0)
+WalkspeedLabel.BorderSizePixel = 0
+WalkspeedLabel.Position = UDim2.new(0.025571933, 0, 0.0122137647, 0)
+WalkspeedLabel.Size = UDim2.new(0.949999988, 0, 0, 30)
+WalkspeedLabel.Font = Enum.Font.GothamBold
+WalkspeedLabel.Text = "Speed Press V"
+WalkspeedLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+WalkspeedLabel.TextScaled = true
+WalkspeedLabel.TextSize = 18.000
+WalkspeedLabel.TextWrapped = true
+
+Fly.Name = "Fly"
+Fly.Parent = Player_2
+Fly.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+Fly.BackgroundTransparency = 1.000
+Fly.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.0237544123, 0, 0.165769681, 0)
+Fly.Size = UDim2.new(0.949999988, 0, 0, 30)
+Fly.Font = Enum.Font.GothamBold
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fly.TextScaled = true
+Fly.TextSize = 18.000
+Fly.TextWrapped = true
+
+WaterCollide.Name = "WaterCollide"
+WaterCollide.Parent = Player_2
+WaterCollide.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+WaterCollide.BackgroundTransparency = 1.000
+WaterCollide.BorderColor3 = Color3.fromRGB(255, 0, 0)
+WaterCollide.BorderSizePixel = 0
+WaterCollide.Position = UDim2.new(0.025571933, 0, 0.24693495, 0)
+WaterCollide.Size = UDim2.new(0.949999988, 0, 0, 30)
+WaterCollide.Font = Enum.Font.GothamBold
+WaterCollide.Text = "WaterWalk"
+WaterCollide.TextColor3 = Color3.fromRGB(255, 255, 255)
+WaterCollide.TextScaled = true
+WaterCollide.TextSize = 18.000
+WaterCollide.TextWrapped = true
+
+Idk_2.Name = "Idk"
+Idk_2.Parent = Player_2
+Idk_2.Active = true
+Idk_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Idk_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Idk_2.BackgroundTransparency = 1.000
+Idk_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Idk_2.Position = UDim2.new(0.5, 0, 0.360000014, 0)
+Idk_2.Selectable = true
+Idk_2.Size = UDim2.new(0.949999988, 0, 0, 30)
+Idk_2.Image = "rbxassetid://3570695787"
+Idk_2.ImageColor3 = Color3.fromRGB(39, 38, 46)
+Idk_2.ScaleType = Enum.ScaleType.Slice
+Idk_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Idk_2.SliceScale = 0.080
+
+NoClip.Name = "NoClip"
+NoClip.Parent = Player_2
+NoClip.BackgroundColor3 = Color3.fromRGB(39, 38, 46)
+NoClip.BackgroundTransparency = 1.000
+NoClip.BorderColor3 = Color3.fromRGB(255, 0, 0)
+NoClip.BorderSizePixel = 0
+NoClip.Position = UDim2.new(0.025571933, 0, 0.325906575, 0)
+NoClip.Size = UDim2.new(0.949999988, 0, 0, 30)
+NoClip.Font = Enum.Font.GothamBold
+NoClip.Text = "NoClip"
+NoClip.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoClip.TextScaled = true
+NoClip.TextSize = 18.000
+NoClip.TextWrapped = true
+
+Player_3.Name = "Player"
+Player_3.Parent = MotherFrame
+Player_3.BackgroundColor3 = Color3.fromRGB(46, 46, 54)
+Player_3.BackgroundTransparency = 1.000
+Player_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Player_3.BorderSizePixel = 0
+Player_3.Position = UDim2.new(0.00748378225, 0, 0.120340958, 0)
+Player_3.Size = UDim2.new(0.200205773, 0, -4.14640988e-09, 30)
+Player_3.Font = Enum.Font.GothamBold
+Player_3.Text = "Player"
+Player_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Player_3.TextSize = 18.000
+Player_3.TextWrapped = true
+Player_3.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts:
+
+local function SRPZFM_fake_script() -- Tactical_3.LocalScript 
+	local script = Instance.new('LocalScript', Tactical_3)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Tactical.Visible = not script.Parent.Parent.Tactical.Visible
+	end)
+end
+coroutine.wrap(SRPZFM_fake_script)()
+local function MIKZ_fake_script() -- Jump.LocalScript 
+	local script = Instance.new('LocalScript', Jump)
+
+	local plr = game.Players.LocalPlayer
+	
+	script.Parent.MouseButton1Click:connect(function()
+		plr.Character.Humanoid.JumpPower = 200
+	end)
+end
+coroutine.wrap(MIKZ_fake_script)()
+local function VLTFX_fake_script() -- JumpReset.LocalScript 
+	local script = Instance.new('LocalScript', JumpReset)
+
+	local plr = game.Players.LocalPlayer
+	
+	script.Parent.MouseButton1Click:connect(function()
+		plr.Character.Humanoid.JumpPower = 50
+	end)
+end
+coroutine.wrap(VLTFX_fake_script)()
+local function ATVFVG_fake_script() -- WalkspeedLabel.LocalScript 
+	local script = Instance.new('LocalScript', WalkspeedLabel)
+
+	WalkspeedLabel.MouseButton1Down:connect(function()
+		local walkspeedplayer = game:GetService("Players").LocalPlayer
+		local walkspeedmouse = walkspeedplayer:GetMouse()
+	
+		local walkspeedenabled = false
+	
+		function x_walkspeed(key)
+			if (key == "v") then
+				if walkspeedenabled == false then
+					_G.WS = 500;
+	
+					local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+					Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+						Humanoid.WalkSpeed = _G.WS;
+					end)
+					Humanoid.WalkSpeed = _G.WS;
+	
+					walkspeedenabled = true
+				elseif walkspeedenabled == true then
+					_G.WS = 15;
+					local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+					Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+						Humanoid.WalkSpeed = _G.WS;
+					end)
+					Humanoid.WalkSpeed = _G.WS;
+	
+					walkspeedenabled = false
+				end
+			end
+		end
+	
+		walkspeedmouse.KeyDown:connect(x_walkspeed)
+	
+	end)
+end
+coroutine.wrap(ATVFVG_fake_script)()
+local function IVSXUPN_fake_script() -- Fly.LocalScript 
+	local script = Instance.new('LocalScript', Fly)
+
+	Fly.MouseButton1Down:connect(function()
+	
+	
+		flying = not flying
+		repeat wait()
+		until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+		local mouse = game.Players.LocalPlayer:GetMouse()
+		repeat wait() until mouse
+		local plr = game.Players.LocalPlayer
+		local torso = plr.Character.Torso
+		local deb = true
+		local ctrl = {f = 0, b = 0, l = 0, r = 0}
+		local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		local maxspeed = 200
+		local speed = 0
+		if flying then
+		end
+	
+		function FlyFunction()
+			local bg = Instance.new("BodyGyro", torso)
+			bg.P = 9e4
+			bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+			bg.cframe = torso.CFrame
+			local bv = Instance.new("BodyVelocity", torso)
+			bv.velocity = Vector3.new(0,0.1,0)
+			bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+			repeat wait()
+				plr.Character.Humanoid.PlatformStand = true
+				if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+					speed = speed+.5+(speed/maxspeed)
+					if speed > maxspeed then
+						speed = maxspeed
+					end
+				elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+					speed = speed-1
+					if speed < 0 then
+						speed = 0
+					end
+				end
+				if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+					lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+				elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				else
+					bv.velocity = Vector3.new(0,0.1,0)
+				end
+				bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+			until not flying
+			ctrl = {f = 0, b = 0, l = 0, r = 0}
+			lastctrl = {f = 0, b = 0, l = 0, r = 0}
+			speed = 0
+			bg:Destroy()
+			bv:Destroy()
+			plr.Character.Humanoid.PlatformStand = false
+		end
+		mouse.KeyDown:connect(function(key)
+			if key:lower() == "w" then
+				ctrl.f = 1
+			elseif key:lower() == "s" then
+				ctrl.b = -1
+			elseif key:lower() == "a" then
+				ctrl.l = -1
+			elseif key:lower() == "d" then
+				ctrl.r = 1
+	
+			end
+		end)
+		mouse.KeyUp:connect(function(key)
+			if key:lower() == "w" then
+				ctrl.f = 0
+			elseif key:lower() == "s" then
+				ctrl.b = 0
+			elseif key:lower() == "a" then
+				ctrl.l = 0
+			elseif key:lower() == "d" then
+				ctrl.r = 0
+			end
+		end)
+		FlyFunction()
+	
+	end)
+end
+coroutine.wrap(IVSXUPN_fake_script)()
+local function KDGLNNI_fake_script() -- WaterCollide.LocalScript 
+	local script = Instance.new('LocalScript', WaterCollide)
+
+	WaterCollide.MouseButton1Down:connect(function() 
+		if WCollide == "Nothing" then
+			WCollide = "On"
+			WaterCollide.BackgroundColor3 = Color3.new(0, 0.5, 0)
+			WaterCollide.Text = "Enabled WaterWalk"
+			for i,v in pairs(game.Workspace.Water:GetChildren()) do
+				if v:IsA("Part") then
+					v.CanCollide = true
+				end
+			end
+		else
+			WCollide = "Nothing"
+			WaterCollide.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+			WaterCollide.Text = "WaterWalk"
+			for i,v in pairs(game.Workspace.Water:GetChildren()) do
+				if v:IsA("Part") then
+					v.CanCollide = false
+				end
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(KDGLNNI_fake_script)()
+local function QADK_fake_script() -- NoClip.LocalScript 
+	local script = Instance.new('LocalScript', NoClip)
+
+	noclip = false
+	game:GetService('RunService').Stepped:connect(function()
+		if Noclip then
+			--script here 
+		end
+	
+	NoClip.MouseButton1Down:connect(function()
+		noclip = not noclip
+		if NoClip.Text == "Enabled NoClip" then
+			NoClip.Text = "NoClip"
+			NoClip.BackgroundColor3 = Color3.new(0, 0, 0)
+		else
+			NoClip.Text = "Enabled NoClip"
+			NoClip.BackgroundColor3 = Color3.new(0.0, 0.5, 0.2)
+		end
+	end)
+end
+coroutine.wrap(QADK_fake_script)()
+local function KQBXNHW_fake_script() -- MotherFrame.LocalScript 
+	local script = Instance.new('LocalScript', MotherFrame)
+
+	Mouse = game.Players.LocalPlayer:GetMouse()
+	
+	Client = game.ReplicatedStorage.Interaction.ClientSetListPlayer
+	players = game.Players
+	for i, v in pairs(players:GetPlayers()) do
+		if v.Name ~= players.LocalPlayer.Name then
+			Client:InvokeServer(players.LocalPlayer.BlacklistFolder, v, true)
+		end
+	end
+	players.PlayerAdded:connect(function(plr)
+		Client:InvokeServer(players.LocalPlayer.BlacklistFolder, plr, true)
+	end)
+end
+coroutine.wrap(KQBXNHW_fake_script)()
+local function VCSYZR_fake_script() -- Player_3.LocalScript 
+	local script = Instance.new('LocalScript', Player_3)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Plr.Visible = not script.Parent.Parent.Plr.Visible
+	end)
+end
+coroutine.wrap(VCSYZR_fake_script)()
